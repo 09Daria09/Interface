@@ -13,6 +13,7 @@ public:
 	Animal() = default;
 	Animal(string n, double k, string cont)
 	{
+		
 		name = n;
 		kg = k;
 		continent = cont;
@@ -23,10 +24,22 @@ public:
 		cout << "KG: " << kg << endl;
 		cout << "Continent: " << continent << endl;
 	}
-	//virtual void Eat() = 0;
-	//virtual void Move() = 0;	
+	virtual void Input()
+	{
+		cout << "Enter name -> ";
+		cin >> name;
+		cout << "Enter KG -> ";
+		cin >> kg;
+		cout << "Enter continent -> ";
+		cin >> continent;
+	}
+	string GetName()
+	{
+		return name;
+	}
+	static int count;
 };
-
+int Animal::count = 0;
 class Elephant: public Animal // наследование 
 {
 public:
@@ -43,7 +56,6 @@ public:
 	{
 		cout << "Elephant Move\n";
 	}
-
 };
 class Parrot : public Animal,public IFly // наследование 
 {
@@ -65,21 +77,6 @@ public:
 	virtual void Fly()
 	{
 		cout << "Parrot Fly\n";
-	}
-
-};
-
-
-class Human :public IAnimal
-{
-public:
-	virtual void Eat()
-	{
-		cout << "Human Eat\n";
-	}
-	virtual void Move()
-	{
-		cout << "Human Move\n";
 	}
 };
 class Cat : public Animal // наследование 
@@ -115,7 +112,6 @@ public:
 	{
 		cout << "Dog Move\n";
 	}
-
 };
 class Pinguin : public Animal, public ISwim // наследование 
 {
@@ -138,7 +134,6 @@ public:
 	{
 		cout << "Pinguin Swim\n";
 	}
-
 };
 class Dolphin : public Animal, public ISwim // наследование 
 {
@@ -161,5 +156,4 @@ public:
 	{
 		cout << "Dolphin Swim\n";
 	}
-
 };

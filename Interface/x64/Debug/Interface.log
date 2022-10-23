@@ -1,2 +1,4 @@
 ﻿  Main.cpp
-  Interface.vcxproj -> C:\Users\Даша\Desktop\Interface\x64\Debug\Interface.exe
+C:\Users\Даша\source\repos\Interface\Interface\Main.cpp(173,3): warning C4551: function call missing argument list
+C:\Users\Даша\source\repos\Interface\Interface\Main.cpp(96): warning C4715: 'Search': not all control paths return a value
+  Interface.vcxproj -> C:\Users\Даша\Source\Repos\Interface\x64\Debug\Interface.exe
